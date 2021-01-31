@@ -116,3 +116,43 @@ You might also find these useful:
 ### 📃 License
 
 [MIT](https://wfxr.mit-license.org/2017) (c) Wenxuan Zhang
+
+### Thing i did after forking this plugin
+after forking this repo I workd on alingment of the status line for seamless integration
+of the prefix highlight to status line. for doing this I inspired from the dwm status line
+for stack modes. for this purpose you need to use the empty prompt variables in the prefix
+highlight plugin github:
+
+"https://github.com/tmux-plugins/tmux-prefix-highlight"
+
+the other thing which I did is adding a my_mood variable which alternates between minimal 
+and fancier(with gitmux prompt "https://github.com/arl/gitmux"). in this way i used alot from tmux wiki in its repository:
+
+"https://github.com/tmux/tmux/wiki/Formats"
+
+to alternate between minimal and fancier mood in your ~/.tmux.conf, add bellow line:
+
+	set -g @tmux_power_my_mood false # false means minimal and no git status and true vice versa
+
+the last thing that i added to the original theme is some icons for active, zoomed and marked window 
+and for doing this i used bellow links:
+
+"https://github.com/tmux/tmux/issues/1887#issue-486703058"
+
+"https://github.com/tmux/tmux/issues/1887#issuecomment-526951441"
+
+Note(2021-02-01 17:02): adding a new flag for ~/.tmux.conf file which alternates the status format. true is fancier option
+which prints the whole name of the non active windows but false(minimal) just prints the index of the window to have a more
+compact window tags. default is true. to use this option add bellow line to your ~/.tmux.conf file:
+
+	set -g @tmux_power_my_status_mood false # false means minimal and true is fancier with big tags
+
+
+
+
+### In The Future ...
+
+
+
+
+
